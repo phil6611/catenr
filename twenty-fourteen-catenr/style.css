@@ -1,0 +1,346 @@
+/*
+Theme Name: twenty fourteen catenr
+Version: 1.0
+Description: A child theme of Twenty Fourteen
+Template: twentyfourteen
+*/
+
+@import url("../twentyfourteen/style.css");
+
+/*=========================================================
+Gestion des polices Web
+==========================================================*/
+
+@font-face {
+    font-family: lato;
+    src: url(http://catern.org/polices/Lato/Lato-Regular.ttf);
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: latoItalic;
+    src: url(http://catern.org/polices/Lato/Lato-Italic.ttf);
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: latoBold;
+    src: url(http://catern.org/polices/Lato/Lato-Bold.ttf);
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: latoBoldItalic;
+    src: url(http://catern.org/polices/Lato/Lato-BoldItalic.ttf);
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: damion;
+    src: url(http://catenr.org/polices/Damion/Damion-Regular.ttf);
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/*=========================================================
+réglage de base
+==========================================================*/
+
+html {
+background-color: #FFCB00;
+max-width: 100vw;
+}
+
+body {
+    background-color: white;
+    font-family: lato;
+    left: 0;
+}
+
+#page, #site-header, .site-main, .entry-content, article, .hentry, .page, .status-publish, .content-area, #primary  {
+    /*background-color: transparent;*/
+}
+.site-content .entry-header,  .site-content .entry-content {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.site {
+	background-color: white;
+}
+
+.site::before {
+	background-color: transparent;
+}
+
+.site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content{
+    /* min-width: 800px;
+    max-width: 800px; */
+}
+
+@media screen and (min-width: 800px) {
+
+    .site {
+        min-width: 80vw;
+    }
+
+.site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content{
+    min-width: 800px;
+    max-width: 800px;
+}
+
+}
+
+#secondary, .widget-title, .widget-title, .primary-sidebar .widget, #search-2, .widget-area .widget input  {
+     color: black;
+}
+
+#search-2 {
+    margin-top: 0.5em;
+    border: black solid 1px;
+    border-radius: 5%;
+}
+
+/*=========================================================
+Entête du site
+==========================================================*/
+
+#masthead {
+    max-width: 100%;
+    background-color: #FFCB00;
+    border-top: solid 2px #CB0032;
+    color: rgba(95,62,27,1);
+}
+
+.site-title, .header-main h1 {
+    font-family: damion;
+    font-size: 1.5em;
+    letter-spacing: auto;
+}
+
+.site-navigation a, .site-title a, .site-title a:hover  {
+   color: #5E3E1A;
+}
+
+.site-navigation a:hover, .primary-navigation li:hover > a {
+    background-color: #5E3E1A;
+}
+
+.site-navigation .current_page_item > a, .site-navigation .current_page_ancestor > a, .site-navigation .current-menu-item > a, .site-navigation .current-menu-ancestor > a {
+   color: #CB0032;
+}
+
+.search-box, .search-toggle, .search-toggle:hover, .search-toggle.active {
+    background-color: #5E3E1A;
+}
+
+/*=========================================================
+Partie centrale
+==========================================================*/
+
+#main {
+    max-width: 100%;
+}
+
+content-area, .site-content {
+   width: 100%;
+}
+
+/*=========================================================
+Pied de page
+==========================================================*/
+
+.pied-info {
+    display: flex;
+    position: relative;
+    width: 100%;
+height: 2em;
+line-height: 2em;
+white-space: nowrap;
+
+}
+
+.pied-info p {
+    display: block;
+    width: 30%;
+    /*text-align: center;*/
+}
+
+#colophon {
+   height: 50px;
+}
+
+#colophon, .site-footer, #pied  {
+    width: 100vw;
+    background-color: #FFCB00;
+    border-top: solid 2px #CB0032;
+    color: rgba(95,62,27,1);
+    z-index: 1000;
+    padding: 5px;
+}
+
+.site-footer p {
+    color: rgba(95,62,27,1);
+}
+
+/*=========================================================
+Page d'accueil
+==========================================================*/
+
+#accueil-body {
+    background-image: url(http://catenr.org/wp-content/uploads/2017/05/background-1000.jpg);
+}
+
+#accueil {
+                display: flex;
+                position: relative;
+                width: 95vw;
+                min-height: 60vh;
+            }
+
+@media screen and (max-width: 1000px) {
+    #accueil {
+                display: block;
+                position: relative;
+                width: 95vw;
+                min-height: 60vh;
+            }
+
+}
+
+#carte-PO {
+    display: block;
+    position: relative;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+#accroche {
+    display: block;
+    position: relative;
+    padding: 1em;
+    width: auto;
+    height: auto;
+    max-height: 25%;
+    margin: auto;
+    border: solid 2px blue;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #888888;
+    color: #3F00FF;
+    background-color: rgba(88, 88, 256, 0.3);
+    font-size: 1.5em;
+    font-family: lato;
+text-align: center;
+}
+
+.accroche-rouge {
+   color: #CB0032;
+   font-size: 1.2em;
+   font-family: latoBold;
+}
+
+/*=========================================================
+Page Projets
+==========================================================*/
+
+.liste_projets h2 {
+    margin-bottom: 2em;
+}
+
+.liste_projets article {
+    display: block;
+    width: 360px;
+    box-shadow: rgba(0,0,0,0.1) 0px 0px 20px 0px;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.liste_projets article:hover {
+    box-shadow: rgba(0,0,0,0.5) 0px 0px 40px;
+}
+
+.liste_projets article header {
+    text-align: center;
+}
+
+.liste_projets picture{
+    display: block;
+    width: 100%;
+    min-height: 200px;
+}
+
+/* Barre de progression */
+
+.barre {
+    display: block;
+    width: 90%;
+    height: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    
+    background-color: rgb(220, 220, 220);
+    box-shadow: rgb(101,101,101) 1px 1px 3px 0px;
+    border-radius: 5px;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+#pourcentage {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: rgb(101,101,101) 1px 1px 3px 0px;
+    font-size: 0.8em;
+    vertical-align: baseline;
+    top: -20px;
+    
+    line-height: 30px;
+    white-space: nowrap;
+    
+    z-index: 100;
+ }
+
+ #barre {
+    display: block;
+    position: relative;
+    height: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(101,101,101) 1px 1px 3px 0px;
+ }
+
+/* Footer */
+
+.footer-projet {
+    display: flex;
+    position: relative;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+.footer-projet a {
+   /* display: inline-block;*/
+    width: 90px;
+    height: 30px;
+    margin-right: 2em;
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8em;
+    background: rgb(221, 153, 51);
+    background: linear-gradient (180deg, rgb(221, 153, 51), rgb(200, 140, 40));
+}
